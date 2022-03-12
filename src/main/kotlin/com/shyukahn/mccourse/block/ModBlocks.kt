@@ -1,6 +1,7 @@
 package com.shyukahn.mccourse.block
 
 import com.shyukahn.mccourse.MCCourse
+import com.shyukahn.mccourse.item.ModItemGroups
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.block.Block
@@ -14,10 +15,10 @@ import net.minecraft.util.registry.Registry
 object ModBlocks {
 
     val ORICHALCUM_BLOCK = registerBlock("orichalcum_block",
-        Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ItemGroup.MISC)
+        Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
 
     val ORICHALCUM_ORE = registerBlock("orichalcum_ore",
-        Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ItemGroup.MISC)
+        Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE)
 
     private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
         registerBlockItem(name, block, group)
