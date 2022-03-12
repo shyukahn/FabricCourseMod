@@ -14,6 +14,9 @@ object ModItems {
     val ORICHALCUM_NUGGET = registerItem("orichalcum_nugget",
         Item(FabricItemSettings().group(ModItemGroups.COURSE)))
 
+    val RAW_ORICHALCUM = registerItem("raw_orichalcum",
+        Item(FabricItemSettings().group(ModItemGroups.COURSE)))
+
     private fun registerItem(name: String, item: Item): Item {
         return Registry.register(Registry.ITEM, Identifier(MCCourse.MOD_ID, name), item)
     }

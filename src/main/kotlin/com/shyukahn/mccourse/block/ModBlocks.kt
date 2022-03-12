@@ -20,6 +20,12 @@ object ModBlocks {
     val ORICHALCUM_ORE = registerBlock("orichalcum_ore",
         Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroups.COURSE)
 
+    val DEEPSLATE_ORICHALCUM_ORE = registerBlock("deepslate_orichalcum_ore",
+        Block(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val RAW_ORICHALCUM_BLOCK = registerBlock("raw_orichalcum_block",
+        Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
     private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
         registerBlockItem(name, block, group)
         return Registry.register(Registry.BLOCK, Identifier(MCCourse.MOD_ID, name), block)
