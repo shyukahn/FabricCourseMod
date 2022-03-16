@@ -1,6 +1,7 @@
 package com.shyukahn.mccourse.item
 
 import com.shyukahn.mccourse.MCCourse
+import com.shyukahn.mccourse.item.custom.DowsingRodItem
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
 import net.minecraft.util.Identifier
@@ -16,6 +17,9 @@ object ModItems {
 
     val RAW_ORICHALCUM = registerItem("raw_orichalcum",
         Item(FabricItemSettings().group(ModItemGroups.COURSE)))
+
+    val DOWSING_ROD = registerItem("dowsing_rod",
+        DowsingRodItem(FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)))
 
     private fun registerItem(name: String, item: Item): Item {
         return Registry.register(Registry.ITEM, Identifier(MCCourse.MOD_ID, name), item)
