@@ -1,6 +1,7 @@
 package com.shyukahn.mccourse
 import com.shyukahn.mccourse.block.ModBlocks
 import com.shyukahn.mccourse.item.ModItems
+import com.shyukahn.mccourse.util.ModRegistries
 import net.fabricmc.api.ModInitializer
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
@@ -14,6 +15,8 @@ object MCCourse : ModInitializer {
 
         ModItems.registerModItems()
         ModBlocks.registerModBlocks()
+
+        ModRegistries.registerModStuffs()
 
         LOGGER.info("Hello Fabric World!")
     }

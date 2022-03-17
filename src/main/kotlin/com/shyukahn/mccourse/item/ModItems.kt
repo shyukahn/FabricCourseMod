@@ -21,6 +21,12 @@ object ModItems {
     val DOWSING_ROD = registerItem("dowsing_rod",
         DowsingRodItem(FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)))
 
+    val TURNIP = registerItem("turnip",
+        Item(FabricItemSettings().group(ModItemGroups.COURSE).food(ModFoodComponents.TURNIP)))
+
+    val COAL_SLIVER = registerItem("coal_sliver",
+        Item(FabricItemSettings().group(ModItemGroups.COURSE)))
+
     private fun registerItem(name: String, item: Item): Item {
         return Registry.register(Registry.ITEM, Identifier(MCCourse.MOD_ID, name), item)
     }
