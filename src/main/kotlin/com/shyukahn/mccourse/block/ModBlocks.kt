@@ -1,6 +1,7 @@
 package com.shyukahn.mccourse.block
 
 import com.shyukahn.mccourse.MCCourse
+import com.shyukahn.mccourse.block.custom.SpeedyBlock
 import com.shyukahn.mccourse.item.ModItemGroups
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -24,7 +25,10 @@ object ModBlocks {
         Block(FabricBlockSettings.of(Material.STONE).strength(5.0f).requiresTool()), ModItemGroups.COURSE)
 
     val RAW_ORICHALCUM_BLOCK = registerBlock("raw_orichalcum_block",
-        Block(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+        Block(FabricBlockSettings.of(Material.STONE).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val SPEEDY_BLOCK = registerBlock("speedy_block",
+        SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroups.COURSE)
 
     private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
         registerBlockItem(name, block, group)
