@@ -1,7 +1,7 @@
 package com.shyukahn.mccourse.item.custom
 
+import com.shyukahn.mccourse.util.ModTags
 import net.minecraft.block.Block
-import net.minecraft.block.Blocks
 import net.minecraft.client.gui.screen.Screen
 import net.minecraft.client.item.TooltipContext
 import net.minecraft.entity.player.PlayerEntity
@@ -70,6 +70,6 @@ class DowsingRodItem(settings: Settings) : Item(settings) {
     }
 
     private fun isValuableBlock(block: Block): Boolean {
-        return block in setOf<Block>(Blocks.COAL_ORE, Blocks.COPPER_ORE, Blocks.DIAMOND_ORE, Blocks.IRON_ORE)
+        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block)
     }
 }
