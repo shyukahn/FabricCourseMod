@@ -1,14 +1,14 @@
 package com.shyukahn.mccourse.block
 
 import com.shyukahn.mccourse.MCCourse
+import com.shyukahn.mccourse.block.custom.ModPressurePlateBlock
 import com.shyukahn.mccourse.block.custom.ModStairsBlock
+import com.shyukahn.mccourse.block.custom.ModStoneButtonBlock
 import com.shyukahn.mccourse.block.custom.SpeedyBlock
 import com.shyukahn.mccourse.item.ModItemGroups
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
-import net.minecraft.block.Block
-import net.minecraft.block.Material
-import net.minecraft.block.SlabBlock
+import net.minecraft.block.*
 import net.minecraft.item.BlockItem
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroup
@@ -38,6 +38,12 @@ object ModBlocks {
 
     val ORICHALCUM_SLAB = registerBlock("orichalcum_slab",
         SlabBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val ORICHALCUM_BUTTON = registerBlock("orichalcum_button",
+        ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val ORICHALCUM_PRESSURE_PLATE = registerBlock("orichalcum_pressure_plate",
+        ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
 
     private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
         registerBlockItem(name, block, group)
