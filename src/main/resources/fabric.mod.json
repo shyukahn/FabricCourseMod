@@ -19,6 +19,12 @@
         "adapter": "kotlin",
         "value": "com.shyukahn.mccourse.MCCourse"
       }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "com.shyukahn.mccourse.MCCourseClient"
+      }
     ]
   },
   "mixins": [

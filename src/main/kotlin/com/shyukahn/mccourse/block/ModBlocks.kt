@@ -1,10 +1,7 @@
 package com.shyukahn.mccourse.block
 
 import com.shyukahn.mccourse.MCCourse
-import com.shyukahn.mccourse.block.custom.ModPressurePlateBlock
-import com.shyukahn.mccourse.block.custom.ModStairsBlock
-import com.shyukahn.mccourse.block.custom.ModStoneButtonBlock
-import com.shyukahn.mccourse.block.custom.SpeedyBlock
+import com.shyukahn.mccourse.block.custom.*
 import com.shyukahn.mccourse.item.ModItemGroups
 import net.fabricmc.fabric.api.`object`.builder.v1.block.FabricBlockSettings
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
@@ -54,6 +51,12 @@ object ModBlocks {
 
     val ORICHALCUM_WALL = registerBlock("orichalcum_wall",
         WallBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
+        ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE)
+
+    val CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
+        ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(3.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE)
 
     private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
         registerBlockItem(name, block, group)
