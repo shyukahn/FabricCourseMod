@@ -43,7 +43,17 @@ object ModBlocks {
         ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
 
     val ORICHALCUM_PRESSURE_PLATE = registerBlock("orichalcum_pressure_plate",
-        ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+        ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+            FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val ORICHALCUM_FENCE = registerBlock("orichalcum_fence",
+        FenceBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val ORICHALCUM_FENCE_GATE = registerBlock("orichalcum_fence_gate",
+        FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
+
+    val ORICHALCUM_WALL = registerBlock("orichalcum_wall",
+        WallBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).requiresTool()), ModItemGroups.COURSE)
 
     private fun registerBlock(name: String, block: Block, group: ItemGroup): Block {
         registerBlockItem(name, block, group)
