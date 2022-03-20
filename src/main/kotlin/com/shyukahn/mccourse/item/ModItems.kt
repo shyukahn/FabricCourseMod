@@ -5,7 +5,6 @@ import com.shyukahn.mccourse.item.custom.*
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
 import net.minecraft.item.ShovelItem
-import net.minecraft.item.SwordItem
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
@@ -46,7 +45,7 @@ object ModItems {
             FabricItemSettings().group(ModItemGroups.COURSE)))
 
     val ORICHALCUM_SWORD = registerItem("orichalcum_sword",
-        SwordItem(ModToolMaterial.ORICHALCUM, 3, -2.4f,
+        ModSlowingSwordItem(ModToolMaterial.ORICHALCUM, 3, -2.4f,
             FabricItemSettings().group(ModItemGroups.COURSE)))
 
     val ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
