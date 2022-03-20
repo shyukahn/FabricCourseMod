@@ -1,10 +1,7 @@
 package com.shyukahn.mccourse.item
 
 import com.shyukahn.mccourse.MCCourse
-import com.shyukahn.mccourse.item.custom.DowsingRodItem
-import com.shyukahn.mccourse.item.custom.ModAxeItem
-import com.shyukahn.mccourse.item.custom.ModHoeItem
-import com.shyukahn.mccourse.item.custom.ModPickaxeItem
+import com.shyukahn.mccourse.item.custom.*
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
 import net.minecraft.item.ShovelItem
@@ -50,6 +47,10 @@ object ModItems {
 
     val ORICHALCUM_SWORD = registerItem("orichalcum_sword",
         SwordItem(ModToolMaterial.ORICHALCUM, 3, -2.4f,
+            FabricItemSettings().group(ModItemGroups.COURSE)))
+
+    val ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
+        ModPaxelItem(ModToolMaterial.ORICHALCUM, 6.0f, -3.0f,
             FabricItemSettings().group(ModItemGroups.COURSE)))
 
     private fun registerItem(name: String, item: Item): Item {

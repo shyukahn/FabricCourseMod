@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier
 object ModTags {
     object Blocks {
         val DOWSING_ROD_DETECTABLE_BLOCKS = createTag("dowsing_rod_detectable_blocks")
+        val PAXEL_MINEABLE = createTag("mineable/paxel")
 
         val ORICHALCUM_BLOCKS = createCommonTag("orichalcum_blocks")
         val ORICHALCUM_ORES = createCommonTag("orichalcum_ores")
