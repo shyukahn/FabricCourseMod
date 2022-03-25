@@ -3,6 +3,8 @@ package com.shyukahn.mccourse.item
 import com.shyukahn.mccourse.MCCourse
 import com.shyukahn.mccourse.item.custom.*
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
+import net.minecraft.entity.EquipmentSlot
+import net.minecraft.item.ArmorItem
 import net.minecraft.item.Item
 import net.minecraft.item.ShovelItem
 import net.minecraft.util.Identifier
@@ -50,6 +52,22 @@ object ModItems {
 
     val ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
         ModPaxelItem(ModToolMaterial.ORICHALCUM, 6.0f, -3.0f,
+            FabricItemSettings().group(ModItemGroups.COURSE)))
+
+    val ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
+        ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+            FabricItemSettings().group(ModItemGroups.COURSE)))
+
+    val ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate",
+        ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST,
+            FabricItemSettings().group(ModItemGroups.COURSE)))
+
+    val ORICHALCUM_LEGGINGS = registerItem("orichalcum_leggings",
+        ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS,
+            FabricItemSettings().group(ModItemGroups.COURSE)))
+
+    val ORICHALCUM_BOOTS = registerItem("orichalcum_boots",
+        ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
             FabricItemSettings().group(ModItemGroups.COURSE)))
 
     private fun registerItem(name: String, item: Item): Item {
