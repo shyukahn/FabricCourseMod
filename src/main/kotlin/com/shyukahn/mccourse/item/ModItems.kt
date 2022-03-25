@@ -55,7 +55,7 @@ object ModItems {
             FabricItemSettings().group(ModItemGroups.COURSE)))
 
     val ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
-        ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+        ModArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
             FabricItemSettings().group(ModItemGroups.COURSE)))
 
     val ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate",
